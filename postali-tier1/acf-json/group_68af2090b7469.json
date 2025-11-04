@@ -1,0 +1,50 @@
+{
+    "key": "group_68af2090b7469",
+    "title": "CTA Block Plugin",
+    "fields": [
+        {
+            "key": "field_68af20911338b",
+            "label": "CTA Block",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Paste the following shortcode anywhere in the body of a page to generate a CTA Block. Both the 'title' and 'content' fields can be edited.\r\n\r\n [CTA_Block title=\"Charged with a crime?\" content=\"Contact us today. Erika Valcarcel Can Help.\"]",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1756307738
+}

@@ -1,0 +1,706 @@
+/**
+ * Template Front Page Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+.home {
+    header #header-top #header-top_right #header-top_right_menu .menu li.menu-item-4943 a::before { display:none !important; }
+    header #header-top #header-top_right #header-top_right_menu .menu li.menu-item-4943:hover a::before { display:block !important; }
+}
+
+.home {
+    font-family: "Inter", sans-serif;
+    
+    p#breadcrumbs {
+        display:none;
+    }
+
+    p.subhead {
+        font-size: 28px;
+    }
+
+    h2 {
+        margin-top: 0 !important;
+    }
+
+    h2,
+    h3 {
+        position: relative;
+
+        &.bordered {
+        margin-bottom: 60px !important;
+
+            &::after {
+                position: absolute;
+                width: 50px;
+                height: 8px;
+                left:0;
+                bottom: -34px;
+                background: $gold;
+                content: "";
+            }
+        }
+    }
+
+    section {
+        &.blue {
+            background:$dkblue;
+            color:$white;
+            font-family: $sans;
+
+            h2,
+            h3,
+            p {
+                color:$white;
+
+                a {
+                    color:$white;
+
+                    &:hover {
+                        color:$gold;
+                    }
+                }
+            }
+
+            .headline {
+                font-size: 30px;
+                font-weight: 900;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+
+            .callout {
+                font-style: italic;
+                font-size: 26px;
+                position: relative;
+                margin-top: 50px;
+
+                &::before {
+                    position:absolute;
+                    height:4px;
+                    top:-40px;
+                    width: 100px;
+                    background:$gold;
+                    content: "";
+                    transform: translateX(-50%);
+                    left:50%;
+                }
+            }
+
+            .btn {
+                &:hover {
+                    background:$white;
+                    color:$dkblue !important;
+                }
+            }
+
+            &.ltblue {
+                background:$ltblue;
+            }
+        }
+    }
+
+    #hp-banner {
+        padding-top: 0;
+        
+        .container {
+            .column-33 {
+                width:37%;
+
+                @include respond(tab-land) {
+                    width: 100%;
+                }
+
+                .blue-box {
+                    background:$ltblue;
+                    padding:30px 50px 60px;
+                    padding-top: 100px;
+                    position: relative;
+                    justify-content: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    text-align: center;
+
+                    h1 {
+                        font-size: 40px;
+                        line-height: 125%;
+                        color:$white;
+                        text-transform: none;
+                        font-weight: 900;
+                        position: relative;
+                        margin-bottom: 20px;
+
+                        &::after {
+                            position: absolute;
+                            width: 50px;
+                            height: 8px;
+                            left: 50%;
+                            bottom: -37px;
+                            background: $gold;
+                            content: "";
+                            transform: translateX(-50%);
+                        }
+                    }
+                    
+                    .banner-subhead {
+                        color:$white;
+                        font-family: $sans;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        margin: 50px 0 20px 0;
+                        line-height: 140%;
+                        font-weight: 900;
+        
+                        @include respond(phone) {
+                            margin-bottom: 30px;
+                        }
+                    }
+
+                    p {
+                        color:$white;
+                    }
+
+                    a.btn {
+                        position: absolute;
+                        bottom: -60px;
+                        transform: translate(-50%, -50%);
+                        left: 50%;
+                        padding: 20px 0;
+                        width: 60%;
+                        font-weight: 900;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .column-66 {
+                padding: 0;
+                margin: 60px 0 0 60px;
+                width: calc(63% - 60px);
+
+                @include respond(tab-land) {
+                    width: 100%;
+                    margin: 60px 0 0;
+                }
+                
+                .img-box {
+                    background-size: 100%;
+                    background-position: center top;
+                    width: 100%;
+                    min-height: 700px;
+
+                    @include respond(desktop-lg) {
+                        background-size: cover;
+                    }
+                }
+
+                .defending {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+
+                    &::before,
+                    &::after {
+                        height: 1px;
+                        position: absolute;
+                        width: 100%;
+                        background: $ltblue;
+                        content: "";
+                        z-index: 0;
+                    }
+
+                    &::before {
+                        top: 47%;
+                    }
+
+                    &::after {
+                        top: 53%;
+                    }
+
+                    span {
+                        font-family: $sans;
+                        text-transform: uppercase;
+                        font-weight: 900;
+                        color: $ltblue;
+                        letter-spacing: 3px;
+                        font-size: 16px;
+                        padding:30px 20px;
+                        background:$white;
+                        z-index: 2;
+                        text-align: center;
+                    }
+                }
+
+                .county-boxes {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: normal;
+
+                    .box {
+                        padding: 50px;
+                        justify-content: center;
+                        display: block;
+                        background: $dkblue;
+                        width: 48%;
+                        box-sizing: border-box;
+                        color: $gold;
+                        font-family: Open Sans, sans-serif;
+                        font-weight: 900;
+                        text-align: center;
+
+                        @include respond(tab-port) {
+                            padding:50px 20px;
+                        }
+
+                        img {
+                            max-width: 160px;
+                            margin: 0 auto 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-panel-3 {
+        .practice-area-boxes {
+            display: flex;
+            justify-content: space-between;
+            align-items: normal;
+            flex-wrap: wrap;
+
+            .practice-area-box {
+                width: 49.5%;
+                display: block;
+                text-align: left;
+                box-sizing: border-box;
+                background:$dkblue;
+                position: relative;
+                margin-bottom: 1%;
+
+                @include respond(tab-port) {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                .box-image {
+                    height:250px;
+                    width: 100%;
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                .box-copy {
+                    padding: 40px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 30px;
+
+                    h3 {
+                        color: $white;
+                        margin-top: 0 !important;
+                    }
+
+                    p {
+                        color:$white;
+                    }
+
+                    ul {
+                        li {
+                            &::marker {
+                                color: white;
+                            }
+                            
+                            a {
+                                color:$white;
+                            }
+                        }
+                    }
+                }
+
+                .box-link {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 30px;
+
+                    .btn {
+                        &:hover {
+                            background-color: $white;
+                            color:$dkblue !important;
+                        }
+                    }
+                }
+            }
+
+            .review-block {
+                width: 49.5%;
+                background: $ltblue;
+                box-sizing: border-box;
+                padding: 50px;
+                display: block;
+                text-align: left;
+                margin-bottom: 1%;
+
+                @include respond(tab-port) {
+                    width: 100%;
+                }
+
+                h3,
+                p,
+                p a {
+                    color:$white;
+                }
+
+                h3 {
+                    margin-top: 0 !important;
+                }
+
+                p.revew-headline {
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    font-weight: 900;
+                    margin-bottom: 5px;
+                    font-family: "Lato", sans-serif;
+                }
+            }
+        }
+    }
+
+    #hp-results {
+        .columns {
+            align-items: normal;
+            display: flex;
+
+            h3 {
+                margin: 0 auto !important;
+            }
+
+            .result {
+                padding: 50px 40px;
+                background: $white;
+                width: 32.6%;
+                box-sizing: border-box;
+                justify-content: center;
+                text-align: center;
+
+                @include respond(tab-land) {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+
+                .title {
+                    color: $ltblue !important;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    margin-bottom: 0 !important;
+                    font-size:17px;
+                }
+
+                p {
+                    color:$dkblue;
+                    margin-bottom: 10px;
+                }
+            }
+
+            a.btn {
+                margin:0 auto;
+            }
+        }
+    }
+
+    #hp-about {
+        position: relative;
+        margin-top: 100px;
+        padding:0;
+
+        @include respond(tab-port) {
+            background:$white;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100px;
+            width: 100%;
+            background: $white;
+            display: block;
+            top: -100px;
+        }
+        
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 230px;
+            top: 0;
+            left: 0;
+            background: $white;
+            position: absolute;
+            z-index: 0;
+        }
+
+        .container {
+            @include respond(tab-port) {
+                padding:0 !important;
+            }
+
+            .columns {
+                align-items: flex-start;
+                flex-wrap: nowrap;
+
+                @include respond(tab-port) {
+                    flex-wrap: wrap;
+                }
+
+                .left {
+                    display: flex;
+                    align-items: flex-end;
+                    width: 40%;
+                    overflow: hidden;
+                    min-width: 550px;
+                    align-self: flex-end;
+
+                    @include respond(desktop-lg) {
+                        width:60%;
+                        align-self: flex-start;
+                    }
+
+                    @include respond(desktop) {
+                        min-width: auto;
+                    }
+
+                    @include respond(tab-port) {
+                        width: 100%;
+                        max-width: 500px;
+                        margin: 0 auto;
+                    }
+
+                    img {
+                        max-width: 90%;
+                        margin: auto;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 20%;
+                        left: 0;
+                        width: 100%;
+                        background: $ltblue;
+                        height: 80%;
+                        z-index: -1;
+                        border-radius: 500px 500px 0 0;
+
+                        @include respond(desktop-lg) {
+                            border-radius: 500px 500px 25px 25px;
+                        }
+
+                        @include respond(tab-port) {
+                            border-radius: 500px 500px 0 0;
+                        }
+    
+                    }
+                }
+
+                .right {
+                    width: 60%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include respond(desktop-lg) {
+                        flex-wrap: wrap;
+                    }
+
+                    @include respond(tab-port) {
+                        width: 100%;
+                        background:$dkblue;
+                    }
+
+                    .about-left {
+                        width: 54%;
+                        padding: 40px;
+                        box-sizing: border-box;
+                        background: $dkblue;
+                        margin-top: 100px;
+                        position: relative;
+
+                        @include respond(tab-port) {
+                            margin-top: 40px;
+                        }
+
+                        .more-box {
+                            position: absolute;
+                            background: $dkblue;
+                            bottom: -92px;
+                            left: 0;
+                            padding: 40px;
+                            width: 100%;
+                            box-sizing: border-box;
+
+                            @include respond(desktop-lg) {
+                                position: relative;
+                                padding:0;
+                                bottom: auto;
+                                left: auto;
+                                background: none;
+                            }
+                        }
+
+                        @include respond(desktop-lg) {
+                            width:100%;
+                        }
+                    }
+
+                    .about-right {
+                        width: 44%;
+                        padding-top: 167px;
+
+                        @include respond(desktop-lg) {
+                            width:100%;
+                            padding-top: 0;
+                            padding:0 40px 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-resources {
+        .container {
+            .columns {
+                align-items: center;
+                
+                .column-66 {
+                    width:55%;
+
+                    @include respond(tab-port) {
+                        width: 100%;
+                    }
+                }
+
+                .column-33 {
+                    background:$dkblue;
+                    padding:30px;
+                    width:36%;
+
+                    @include respond(tab-port) {
+                        width: 100%;
+                        display: block;
+                    }
+
+                    p.gold.spaced {
+                        color: $gold;
+                        text-transform: uppercase;
+                        font-weight: 900;
+                        letter-spacing: 3px;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        margin-left: 30px;
+                        margin-bottom: 0;
+
+                        li {
+                            position: relative;
+                            margin-bottom: 7px !important;
+                            
+                            a {
+                                color: $white;
+                            }
+
+                            &::before {
+                                position: absolute;
+                                content: "\e90a";
+                                font-family: $icomoon;
+                                left:-30px;
+                                color:$white;
+                                transition: $trans;
+                            }
+
+                            &:hover {
+                                a {
+                                    color:$gold;
+                                }
+
+                                &::before {
+                                    color:$gold;
+                                    left:-27px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-understanding {
+        .container {
+            .columns {
+                .column-33 {
+                    margin-top: 10px;
+                    padding-top: 15px;
+                    position: relative;
+
+                    @include respond(tab-port) {
+                        margin-bottom: 25px;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        height: 8px;
+                        width:50px;
+                        background:$gold;
+                        left:0;
+                        top:-28px;
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-faqs-top {
+        padding-bottom: 30px;
+    }
+
+    #hp-faqs-bottom {
+        .faq {
+            @include respond(tab-land) {
+                width: 47%;
+            }
+
+            @include respond(tab-port) {
+                width: 100%;
+            }
+
+            h3 {
+                color:$white;
+                margin-bottom: 50px !important;
+                position: relative;
+                text-transform: uppercase;
+                font-size: 19px;
+                font-weight: 900;
+                line-height: 150%;
+
+                &::after {
+                    position: absolute;
+                    content:"";
+                    height:8px;
+                    width: 50px;
+                    background:$gold;
+                    left:0;
+                    bottom:-28px;
+                }
+            }
+        }
+    }
+}
