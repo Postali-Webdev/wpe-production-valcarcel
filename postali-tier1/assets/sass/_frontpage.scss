@@ -8,6 +8,11 @@
 .home {
     header #header-top #header-top_right #header-top_right_menu .menu li.menu-item-4943 a::before { display:none !important; }
     header #header-top #header-top_right #header-top_right_menu .menu li.menu-item-4943:hover a::before { display:block !important; }
+
+    @include respond(tab-land) {
+        header #header-top #header-top_right #header-top_right_menu .menu li.menu-item-4943 a::before { display:none !important; }
+        header #header-top #header-top_right #header-top_right_menu .menu li.menu-item-4943:hover a::before { display:none !important; }
+    }
 }
 
 .home {
